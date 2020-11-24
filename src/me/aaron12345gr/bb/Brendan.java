@@ -9,6 +9,7 @@ import net.dv8tion.jda.api.utils.cache.CacheFlag;
 
 public class Brendan {
 
+	// Version 1.1
 	public static String prefix = "brendan please ";
 
 	public static void main(String[] args) throws LoginException, InterruptedException {
