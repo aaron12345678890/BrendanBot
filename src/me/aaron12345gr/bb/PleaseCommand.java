@@ -30,11 +30,18 @@ public class PleaseCommand extends ListenerAdapter {
 		} else if (type.equalsIgnoreCase(Brendan.prefix + "ping")) {
 			ch.sendMessage("pong").queue();
 		} else if (type.equalsIgnoreCase("brendan is a bitch")) {
-			ch.sendMessage("banned").queue();
+			ch.sendMessage("baned").queue();
 		} else if (type.equalsIgnoreCase(Brendan.prefix + "roll")) {
 			Random random = new Random();
 			int roll = random.nextInt(6) + 1;
 			ch.sendMessage("Your roll: " + roll).queue();
+		} else if (type.equalsIgnoreCase("brendan")) {
+			ch.sendMessage("what").queue();
+		} else if (type.equalsIgnoreCase("fuck you brendan")) {
+			ch.sendMessage("baned").queue();
+		} else if (type.equalsIgnoreCase("thanks brendan")) {
+			ch.sendMessage("no problem").queue();
 		}
+
 	}
 }
