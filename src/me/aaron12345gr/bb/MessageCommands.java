@@ -9,7 +9,7 @@ import net.dv8tion.jda.api.entities.MessageChannel;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
-public class PleaseCommand extends ListenerAdapter {
+public class MessageCommands extends ListenerAdapter {
 
 	public void onMessageReceived(MessageReceivedEvent event) {
 		Message msg = event.getMessage();
@@ -41,6 +41,33 @@ public class PleaseCommand extends ListenerAdapter {
 			ch.sendMessage("baned").queue();
 		} else if (type.equalsIgnoreCase("thanks brendan")) {
 			ch.sendMessage("no problem").queue();
+		} else if (type.equalsIgnoreCase("i love you brendan")) {
+			ch.sendMessage("gay").queue();
+		} else if (type.equalsIgnoreCase("brendan please")) {
+			ch.sendMessage("i please your mom").queue();
+		} else if (type.equals("brendan moment")) {
+			EmbedBuilder info = new EmbedBuilder();
+			info.setTitle("Brendan moment");
+			info.setColor(Color.BLACK);
+			String avatarBrendanDouble = "https://i.imgur.com/LMHI067.png";
+			String avatarSidewaysBrendan = "https://i.imgur.com/ZHm5p8u.png";
+			String avatarUpwardsBrendan = "https://i.imgur.com/KJ5dmgI.png";
+
+			Random random = new Random();
+			int roll = random.nextInt(4);
+
+			if (roll == 0) {
+				info.setImage(avatarBrendanDouble);
+			} else if (roll == 1) {
+				info.setImage(avatarSidewaysBrendan);
+			} else if (roll == 2) {
+				info.setImage(avatarUpwardsBrendan);
+			} else if (roll == 3) {
+				ch.sendMessage("Your fucking gay").queue();
+			}
+
+			ch.sendMessage(info.build()).queue();
+			info.clear();
 		}
 
 	}
